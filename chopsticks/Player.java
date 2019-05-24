@@ -6,6 +6,7 @@ public class Player
     private int totalfing;
    private int rightfing;
   private int leftfing;
+  private int win=0;
   public String name;
 
     /**
@@ -18,13 +19,28 @@ public class Player
         rightfing = 1;
         leftfing = 1;
     }
-    public void attack(Player other, boolean fromhand, boolean tohand)
+    public void attack(Player other, boolean fromright)
     {
+        boolean toright;
         
         
         
         
     }
+    public void split()
+    {
+        
+    
+    }
+    public void getAttacked(boolean toright, int num)
+    {
+        
+    }
+    public int win()
+    {
+        return win;
+    }
+   
     
    
 }

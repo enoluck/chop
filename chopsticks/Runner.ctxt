@@ -2,6 +2,6 @@
 comment0.target=Runner
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
-comment2.params=
-comment2.target=void\ turns()
+comment2.params=a\ b
+comment2.target=int\ turn(Player,\ Player)
 numComments=3
