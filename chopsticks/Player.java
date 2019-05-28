@@ -15,6 +15,7 @@ public class Player
     public Player(String name)
     {
         // initialise instance variables
+        this.name = name;
         totalfing = 2;
         rightfing = 1;
         leftfing = 1;

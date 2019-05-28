@@ -31,8 +31,8 @@ public class Runner
     }
     public static int turn(Player a, Player b){
         Scanner reader = new Scanner(System.in);
-        
-        System.out.println(a.getname() + " turn:");
+        String bob = a.getname();
+        System.out.println(bob+ "next turn");
         System.out.print("attack or split: ");
         String o = reader.nextLine();
         if(o.toLowerCase().equals("attack")){
