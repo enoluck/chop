@@ -17,8 +17,12 @@ public class Runner
        Player two = new Player(t);
        boolean key=true;
         while(key==true){
-       if(turn(one,two)==0){return;} 
-       if(turn(two,one)==0){return;}
+        printstat(one,two);
+            turn(one,two); 
+       if(two.win()==1){System.out.println(one.getname() + "wins!");return;}
+       printstat(one,two);
+       turn(two,one);
+       if(one.win()==1){System.out.println(two.getname() + "wins!");return;}
        
        
        }
@@ -28,7 +32,7 @@ public class Runner
     public static int turn(Player a, Player b){
         Scanner reader = new Scanner(System.in);
         
-        System.out.println("Player one turn:");
+        System.out.println(a.getname() + " turn:");
         System.out.print("attack or split: ");
         String o = reader.nextLine();
         if(o.toLowerCase().equals("attack")){
@@ -38,11 +42,19 @@ public class Runner
              else{a.attack(b,false);}
         }
         else{
-        a.split();
+            System.out.print("Split to how much? (either hand): ");
+             int z = reader.nextInt();
+        a.split(z);
        }
        return a.win();
     }
-        
+   public static void printstat(Player a, Player b){
+     System.out.println("Player one                         Player two");  
+     System.out.println("Right hand:                        Right hand:");  
+     System.out.println(a.getright()+"                        " + b.getright());  
+     System.out.println("Left hand:                         Left hand:");  
+     System.out.println(a.getleft()+ "                         " + b.getleft());  
+    }
        
             
         
