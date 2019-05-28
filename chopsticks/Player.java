@@ -42,8 +42,9 @@ public class Player
     public void split(int num)
     {
         if(num>totalfing || num<0){rightfing=totalfing; leftfing=0;}
-        rightfing=num;
+        else{rightfing=num;
         leftfing=totalfing-num;
+    }
     
     }
     public void getAttacked(boolean toright, int num)
